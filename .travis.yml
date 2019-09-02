@@ -1,0 +1,16 @@
+
+dist: bionic
+
+services:
+  - docker
+
+env:
+  - DOCKER_IMAGE=mobiledevops/flutter-sdk-image:v1.7.8-hotfix.4
+
+before_install:
+  - docker pull $DOCKER_IMAGE
+  - docker run --name android_ci -t -d $DOCKER_IMAGE /bin/sh
+  - tar Ccf . - . | docker exec -i android_ci tar Cxf /home/mobiledevops/app -
+
+script: 
+  - docker exec android_ci flutter build apk

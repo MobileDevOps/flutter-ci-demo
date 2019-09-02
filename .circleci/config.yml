@@ -1,0 +1,10 @@
+version: 2.1
+jobs:
+  build:
+    docker: 
+      - image: mobiledevops/flutter-sdk-image:v1.7.8-hotfix.4
+    steps:
+      - checkout
+      - run: 
+          name: Flutter Android Build
+          command: flutter build apk

@@ -1,0 +1,11 @@
+image: mobiledevops/flutter-sdk-image:v1.7.8-hotfix.4
+
+stages:
+    - build
+
+release_build:
+    stage: build
+    tags:
+      - shared
+    script:
+        - flutter build apk
