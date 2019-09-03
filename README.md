@@ -4,14 +4,14 @@ Demo for a Flutter app ci/cd pipeline
 
 ## Features
 
-- [x] CI service integration for Android app
+- [x] CI service integration for Android and iOS app
     - [x] Travis CI: [.travis.yml](.travis.yml) (Jobs: https://travis-ci.org/mobiledevops/flutter-ci-demo)
     - [x] CircleCI: [.circleci/config.yml](.circleci/config.yml) (Jobs: https://circleci.com/gh/MobileDevOps/flutter-ci-demo)
     - [x] GitLab CI/CD: [.gitlab-ci.yml](.gitlab-ci.yml) (Pipelines: https://gitlab.com/mobiledevops/flutter-ci-demo/pipelines)
+        - Public shared runner doesn't support macOS build server
 
 ## Planned Features
 
-- [ ] CI service integration for iOS app
 - [ ] Unit / ui testing
 - [ ] Different app configuration (bundle id)
 - [ ] Signing the Android app with different key stores
