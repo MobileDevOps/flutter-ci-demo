@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   "android":
     docker: 
-      - image: mobiledevops/flutter-sdk-image:v1.7.8-hotfix.4
+      - image: mobiledevops/flutter-sdk-image:v1.9.1-hotfix.2
     steps:
       - checkout
       - run: 
@@ -20,7 +20,7 @@ jobs:
           command: npm install -g fvm
       - run:
           name: Install Flutter SDK
-          command: fvm stable && fvm v1.7.8+hotfix.4
+          command: fvm stable && fvm v1.9.1+hotfix.2
       - run:
           name: Compile iOS App
           command: flutter build ios --release --no-codesign 

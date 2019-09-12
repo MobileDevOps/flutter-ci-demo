@@ -1,8 +1,8 @@
 
 env:
   global:
-    - FLUTTER_VERSION=v1.7.8+hotfix.4
-    - DOCKER_IMAGE=mobiledevops/flutter-sdk-image:v1.7.8-hotfix.4
+    - FLUTTER_VERSION=v1.9.1+hotfix.2
+    - DOCKER_IMAGE=mobiledevops/flutter-sdk-image:v1.9.1-hotfix.2
 
 matrix:
   include:
