@@ -1,8 +1,8 @@
 
 env:
   global:
-    - FLUTTER_VERSION=v1.9.1+hotfix.2
-    - DOCKER_IMAGE=mobiledevops/flutter-sdk-image:v1.9.1-hotfix.2
+    - FLUTTER_VERSION=1.22.5
+    - DOCKER_IMAGE=mobiledevops/flutter-sdk-image:1.22.5
 
 matrix:
   include:
@@ -11,7 +11,7 @@ matrix:
       services: 
         - docker
     - os: osx
-      osx_image: xcode10.3  
+      osx_image: xcode12.3  
 
 before_install:
   - |
@@ -24,8 +24,6 @@ before_install:
   
   - |
     if [ "$TRAVIS_OS_NAME" = "osx" ]; then
-      bundle install
-
       npm install -g fvm
       fvm stable > /dev/null
       fvm $FLUTTER_VERSION > /dev/null
