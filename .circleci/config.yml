@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   "android":
     docker: 
-      - image: mobiledevops/flutter-sdk-image:1.22.5
+      - image: mobiledevops/flutter-sdk-image:3.44.4
     steps:
       - checkout
       - run: 
